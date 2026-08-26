@@ -1,14 +1,14 @@
 :root {
   --bg: #07090c;
   --bg-soft: #0d1117;
-  --panel: #111821;
+  --panel: #1200b4;
   --panel-2: #151d27;
   --text: #f4f5f7;
   --muted: #a7b0bc;
   --line: rgba(255, 255, 255, 0.11);
-  --accent: #ff4f3d;
-  --accent-light: #ff7a68;
-  --accent-dark: #b62c20;
+  --accent: #0F52BA;
+  --accent-light: #FFF200;
+  --accent-dark: #082567;
   --max-width: 1180px;
   --radius: 18px;
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
@@ -203,24 +203,34 @@ img {
   font-weight: 800;
 }
 
+.about-heading span {
+  display: block;
+}
+
+.about-heading span + span {
+  margin-top: 15px;
+}
+
 .hero h1 {
   margin: 0;
   line-height: 0.9;
   letter-spacing: -0.055em;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1em;
 }
 
-.hero h1 span {
-  display: block;
+.hero h1 span,
+.hero h1 strong {
+  display: inline;
   font-size: clamp(5rem, 16vw, 11rem);
   font-weight: 950;
 }
 
 .hero h1 strong {
-  display: block;
-  margin-top: 6px;
   color: var(--accent);
-  font-size: clamp(2.4rem, 6vw, 4.4rem);
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
@@ -277,13 +287,14 @@ img {
 }
 
 .button-secondary {
-  color: white;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border: 0;
+  box-shadow: 0 12px 34px rgba(15, 82, 186, 0.18);
 }
 
 .button-secondary:hover {
-  background: rgba(255, 255, 255, 0.09);
+  background: linear-gradient(135deg, var(--accent-light), var(--accent));
 }
 
 .hero-note {
@@ -407,11 +418,11 @@ h2 {
 }
 
 .newsletter-card {
-  padding: 34px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .signup-form label {
