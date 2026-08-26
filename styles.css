@@ -630,3 +630,16 @@ h2 {
     transition: none !important;
   }
 }
+
+@media (max-width: 600px) {
+  .hero h1 {
+    justify-content: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .hero h1 span,
+  .hero h1 strong {
+    font-size: clamp(2.75rem, 16vw, 4.25rem);
+  }
+}
