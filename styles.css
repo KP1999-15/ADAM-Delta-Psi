@@ -643,3 +643,18 @@ h2 {
     font-size: clamp(2.75rem, 16vw, 4.25rem);
   }
 }
+
+.hero-art {
+  display: block;
+  width: min(100%, 700px);
+  height: auto;
+  margin: 20px auto 0;
+}
+
+@media (max-width: 600px) {
+  .hero-art {
+    width: 100%;
+    max-width: 430px;
+    margin-top: 16px;
+  }
+}
